@@ -29,7 +29,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Publiée le</dt>
+                  <dt className="sr-only">Published On</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -46,33 +46,6 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 print:xl:divide-white print:xl:divide-transparent print:xl:divide-y-0 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <Link
-              href={`/equipe#${siteMetadata.authors[author].slug}`}
-              aria-label={`Voir le profile de ${siteMetadata.authors[author].name}`}
-              title={`Voir le profile de ${siteMetadata.authors[author].name}`}
-              className="print:hidden"
-            >
-              <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
-                <dt className="sr-only">Auteur ou autrice</dt>
-                <dd>
-                  <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
-                    <li className="flex items-center space-x-2 flex-col">
-                      <img
-                        src={siteMetadata.authors[author].image}
-                        alt="avatar"
-                        className="w-28 h-28 rounded-full"
-                      />
-                      <dl className="text-sm font-medium leading-5 whitespace-nowrap  mt-3">
-                        <dt className="sr-only">Nom</dt>
-                        <dd className="text-gray-900 dark:text-gray-100 text-xl">
-                          {siteMetadata.authors[author].name}
-                        </dd>
-                      </dl>
-                    </li>
-                  </ul>
-                </dd>
-              </dl>
-            </Link>
             <div className="xl:pb-0 xl:col-span-3 xl:row-span-2 relative">
               <div className="pt-10 absolute right-0 print:hidden">
                 <button
@@ -114,7 +87,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {prev && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Recette Précédente
+                          Previous Page
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400">
                           <Link href={`/recettes/${prev.slug}`}>{prev.title}</Link>
@@ -124,7 +97,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {next && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Recette suivante
+                          Next Page
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400">
                           <Link href={`/recettes/${next.slug}`}>{next.title}</Link>
@@ -139,7 +112,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   href="/recettes"
                   className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
                 >
-                  &larr; Revenir aux recettes
+                  &larr; Back to All Posts
                 </Link>
               </div>
             </footer>

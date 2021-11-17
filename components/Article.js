@@ -48,19 +48,9 @@ const Article = ({ slug, title, summary, tags, image, isH2 = true, hasExtraLink 
     <article>
       <div className="space-y-2 grid xl:grid-rows-2 xl:grid-cols-4 xl:grid-flow-col xl:space-y-0 gap-2 xl:gap-4">
         <div className="xl:row-span-2">{thumbnail}</div>
-        <div className="order-first xl:order-none xl:col-span-2 space-y-6">
-          <div>
-            {header}
-            <div className="flex flex-wrap">
-              {tags.map((tag) => (
-                <Tag key={tag} text={tag} />
-              ))}
-            </div>
-          </div>
-        </div>
         <div className="xl:row-span-1 xl:col-span-2">
+          {header}
           <div className="prose text-gray-500 max-w-none dark:text-gray-400">{summary}</div>
-
           {hasExtraLink && (
             <div className="text-base font-medium leading-6">
               <Link
@@ -68,10 +58,20 @@ const Article = ({ slug, title, summary, tags, image, isH2 = true, hasExtraLink 
                 className="text-blue-500 dark:text-orange-500 hover:text-blue-600 dark:hover:text-orange-400"
                 aria-label={`Read "${title}"`}
               >
-                Découvrir &rarr;
+                Details &rarr;
               </Link>
             </div>
           )}
+        </div>
+        <div className="order-first xl:order-none xl:col-span-2 space-y-6">
+          <div>
+            <div className="flex flex-wrap">
+              <span>Tags:&nbsp;&nbsp;</span>
+              {tags.map((tag) => (
+                <Tag key={tag} text={tag} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </article>

@@ -15,7 +15,14 @@ const Figure = ({ alt, src, srcurl, author, authorurl, host, hosturl }) => {
   //     height={dimensions.height}
   //   />
   // )
-  image = <img className="rounded w-full object-cover object-center" style={{ margin: '0', maxHeight: '480px' }} alt={alt} src={src} />
+  image = (
+    <img
+      className="rounded w-full object-cover object-center"
+      style={{ margin: '0' }}
+      alt={alt}
+      src={src}
+    />
+  )
   let caption = (
     <figcaption className="text-center">
       Photo par{' '}
@@ -31,13 +38,12 @@ const Figure = ({ alt, src, srcurl, author, authorurl, host, hosturl }) => {
   return (
     <figure className="print:hidden flex flex-col items-center relative">
       {srcurl ? (
-        <a className="w-full" href={srcurl} title="Voir l'image">
+        <a className="w-full" target="_blank" href={srcurl} title="See picture" rel="noreferrer">
           {image}
         </a>
       ) : (
         { image }
       )}
-      {caption}
     </figure>
   )
 }

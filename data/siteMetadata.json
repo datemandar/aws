@@ -1,19 +1,19 @@
 {
-  "title": "Tambouille",
-  "author": "Kim Clarisse & Aloïs de Gouvello",
-  "headerTitle": "Tambouille",
-  "description": "Notre site de recettes diverses et variées partagées par Kim, Aloïs et leurs proches à l'attention de ces derniers.",
-  "language": "fr-FR",
+  "title": "AWS Interview Blog",
+  "author": "Mandar Date",
+  "headerTitle": "AWS Interview Blog",
+  "description": "This is a temporary blog created as a visual aid while answering LP questions at an AWS interview. It is a React app customized after forking from https://github.com/aloisdg/tambouille",
+  "language": "en-US",
   "siteUrl": "https://tambouille.vercel.app",
-  "siteRepo": "https://github.com/aloisdg/tambouille",
-  "image": "/static/images/alois.png",
-  "socialBanner": "/static/images/twitter-card.png",
-  "email": "alois@outlook.fr",
-  "github": "https://github.com/aloisdg",
-  "twitter": "https://twitter.com/aloisdg",
-  "linkedin": "https://www.linkedin.com",
+  "siteRepo": "https://github.com/datemandar",
+  "image": "/static/images/time-machine.png",
+  "socialBanner": "/static/images/time-machine.png",
+  "email": "mandar.date@gmail.com",
+  "github": "https://github.com/datemandar",
+  "twitter": "https://twitter.com/datemandar",
+  "linkedin": "https://www.linkedin.com/in/mandardate",
   "rss": "/index.xml",
-  "locale": "fr-FR",
+  "locale": "en-US",
 
   "authors": {
     "kim": {
@@ -27,6 +27,12 @@
       "name": "Aloïs de Gouvello",
       "email": "alois@outlook.fr",
       "image": "/static/images/alois.png"
+    },
+    "date": {
+      "slug": "date",
+      "name": "Mandar Date",
+      "email": "mandar.date@gmail.com",
+      "image": "/static/images/time-machine.png"
     }
   }
 }

@@ -3,7 +3,7 @@ import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSeo } from '@/components/SEO'
 
-export const POSTS_PER_PAGE = 10
+export const POSTS_PER_PAGE = 5
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('recettes')
@@ -20,7 +20,7 @@ export default function Recettes({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
       <PageSeo
-        title="Recettes"
+        title="All Posts"
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/recettes`}
       />
@@ -28,7 +28,7 @@ export default function Recettes({ posts, initialDisplayPosts, pagination }) {
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="Toutes les recettes"
+        title="All Posts"
       />
     </>
   )
